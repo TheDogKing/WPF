@@ -1,0 +1,21 @@
+﻿<Window x:Class="FindT.RouterEventT"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:local="clr-namespace:FindT"
+    Title="OK" Height="200" Width="350">
+    <Grid Name="gridRoot" local:TimeButton.ReportTime="ReportTimeHandle">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.5*"></ColumnDefinition>
+            <ColumnDefinition Width="0.5*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Canvas Grid.Column="0" Name="CanvasLeft" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <local:TimeButton x:Name="ButtonLeft">Left</local:TimeButton>
+        </Canvas>
+        <Canvas Grid.Column="1" Name="CanvasRight" local:TimeButton.ReportTime="ReportTimeHandle" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <local:TimeButton x:Name="ButtonRight" >Right</local:TimeButton>
+        </Canvas>
+    </Grid>
+</Window>

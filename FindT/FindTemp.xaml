@@ -1,4 +1,4 @@
-﻿<Window x:Class="FindT.FindTemp"
+﻿<Window x:Class="FindT.Findtemp"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -18,7 +18,6 @@
             <RowDefinition Height="0.1*"></RowDefinition>
         </Grid.RowDefinitions>
         <Label Grid.Row="0"></Label>
-        <Border BorderBrush="Black" BorderThickness="0,0,1,0"  Grid.Column="0" Grid.Row="1" />
         <Grid Grid.Column="0" Grid.Row="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"></RowDefinition>
@@ -62,6 +61,7 @@
                 </ContentControl>
             </Border>
         </Grid>
+        <GridSplitter Grid.Column="0" Width="2" Background="Red" Grid.Row="1"></GridSplitter>
         <Grid Grid.Column="1" Grid.Row="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"></RowDefinition>
@@ -99,9 +99,12 @@
             <Label Style="{StaticResource LabelInfoStyle}" Grid.Row="3" Grid.Column="0" >T2:</Label>
             <TextBox Grid.Row="3" Grid.Column="1" Name="T2" Style="{StaticResource TextBoxStyle}" IsReadOnly="True"></TextBox>
             <Label Grid.Row="3" Grid.Column="1" FontSize="18" Margin="120,8,0,0">℃</Label>
-            <Border Grid.Row="4" Grid.ColumnSpan="3" CornerRadius="12" BorderBrush="Black" BorderThickness="1" Margin=" 10" Width="140">
+            <Border Grid.Row="3" Grid.RowSpan="2" Grid.ColumnSpan="3" CornerRadius="12" BorderBrush="Black" BorderThickness="1" Margin=" 10" Width="140">
                 <ContentControl>
-                    <Button  Name="Next" Click="Next_Click" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Content="迭代"></Button>
+                    <StackPanel>
+                        <TextBox Name="box"></TextBox>
+                        <Button  Name="Next" Click="Next_Click" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Content=""></Button>
+                    </StackPanel>
                 </ContentControl>
             </Border>
         </Grid>

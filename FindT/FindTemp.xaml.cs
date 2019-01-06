@@ -1,19 +1,30 @@
 ﻿using System;
 using System.Collections;
 using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
 
 namespace FindT
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class FindTemp : Window
+    public partial class Findtemp : Window
     {
+        Student aaaa;
+
         public Hashtable AnswerHashTable = new Hashtable();
         public ArrayList HashtableList = new ArrayList();
-        public FindTemp()
+        public Findtemp()
         {
             InitializeComponent();
+            aaaa = new Student();
+            Binding binding = new Binding();
+
+            binding.Source = aaaa;
+            binding.Path = new PropertyPath("Name");
+
+            BindingOperations.SetBinding(this.box, TextBox.TextProperty, binding);
             //ControlTemplate baseWindowTemplate = (ControlTemplate)App.Current.Resources["MyWindowTemplate"];
         }
 
@@ -65,10 +76,25 @@ namespace FindT
 
         private void Next_Click(object sender, RoutedEventArgs e)
         {
-            foreach  (Hashtable item  in HashtableList)
-            {
-                //item["asd"];
-            }
+            aaaa.Name += "Name";
+            //foreach  (Hashtable item  in HashtableList)
+            //{
+            //    //item["asd"];
+            //}
+        }
+
+        
+        
+        
+    }
+
+    public class Student
+    {
+        public string name;
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
         }
     }
 }
