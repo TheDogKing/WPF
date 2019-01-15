@@ -1,0 +1,16 @@
+﻿<Page x:Class="FindT.IN_BeginIN"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:FindT"
+      mc:Ignorable="d" 
+      d:DesignHeight="50" d:DesignWidth="200"
+      Title="IN_BeginIN">
+    <Grid>
+        <StackPanel>
+            <Button Name="Button" Click="BeginIN_Button_Click" Content="异步调用"/>
+            <Button Name="Button1" Click="IN_Button_Click" Content="同步调用"/>
+        </StackPanel>
+    </Grid>
+</Page>

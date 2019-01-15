@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{1EA8107B-1CFB-41F8-9584-730E5C358380}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>FindT</RootNamespace>
     <AssemblyName>FindT</AssemblyName>
@@ -77,6 +77,9 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -105,6 +108,14 @@
     <Page Include="AttachedProperty.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="IN_BeginIN.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MultiThreading.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="RouterEventT.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -139,6 +150,12 @@
     </Compile>
     <Compile Include="AttachedProperty.xaml.cs">
       <DependentUpon>AttachedProperty.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="IN_BeginIN.xaml.cs">
+      <DependentUpon>IN_BeginIN.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MultiThreading.xaml.cs">
+      <DependentUpon>MultiThreading.xaml</DependentUpon>
     </Compile>
     <Compile Include="RouterEventT.xaml.cs">
       <DependentUpon>RouterEventT.xaml</DependentUpon>
