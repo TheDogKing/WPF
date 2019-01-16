@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{1EA8107B-1CFB-41F8-9584-730E5C358380}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>FindT</RootNamespace>
     <AssemblyName>FindT</AssemblyName>
@@ -117,6 +117,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Progress.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="RouterEventT.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -156,6 +160,9 @@
     </Compile>
     <Compile Include="MultiThreading.xaml.cs">
       <DependentUpon>MultiThreading.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Progress.xaml.cs">
+      <DependentUpon>Progress.xaml</DependentUpon>
     </Compile>
     <Compile Include="RouterEventT.xaml.cs">
       <DependentUpon>RouterEventT.xaml</DependentUpon>
