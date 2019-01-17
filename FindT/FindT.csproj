@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{1EA8107B-1CFB-41F8-9584-730E5C358380}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>FindT</RootNamespace>
     <AssemblyName>FindT</AssemblyName>
@@ -101,6 +101,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="BackgroundWorkT.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="DependencyPropertyT.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -148,6 +152,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BackgroundWorkT.xaml.cs">
+      <DependentUpon>BackgroundWorkT.xaml</DependentUpon>
     </Compile>
     <Compile Include="DependencyPropertyT.xaml.cs">
       <DependentUpon>DependencyPropertyT.xaml</DependentUpon>
